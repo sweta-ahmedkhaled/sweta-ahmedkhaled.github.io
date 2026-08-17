@@ -6,3 +6,5 @@ vendor/
 Gemfile.lock
 .DS_Store
 .auto-publish.log
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
