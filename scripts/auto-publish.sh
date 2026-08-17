@@ -14,8 +14,45 @@ log() {
   echo "$(date '+%Y-%m-%d %H:%M:%S') $1" >>"$LOG_FILE"
 }
 
+normalize_post_filenames() {
+  cd "$REPO_DIR" || return
+  python3 - <<'PYEOF'
+import glob, os, re, subprocess, datetime
+
+date_prefix_re = re.compile(r'^\d{4}-\d{2}-\d{2}-')
+
+for path in glob.glob("_posts/*.md"):
+    base = os.path.basename(path)
+    if date_prefix_re.match(base):
+        continue
+
+    date_str = None
+    try:
+        with open(path, encoding="utf-8") as f:
+            content = f.read()
+        if content.startswith("---"):
+            end = content.find("\n---", 3)
+            front = content[3:end] if end != -1 else ""
+            m = re.search(r'^date:\s*["\']?(\d{4}-\d{2}-\d{2})', front, re.MULTILINE)
+            if m:
+                date_str = m.group(1)
+    except OSError:
+        continue
+
+    if not date_str:
+        date_str = datetime.date.today().isoformat()
+
+    new_path = os.path.join("_posts", f"{date_str}-{base}")
+    if os.path.exists(new_path):
+        continue
+    subprocess.run(["git", "mv", path, new_path], check=False)
+PYEOF
+}
+
 do_commit() {
   cd "$REPO_DIR" || return
+
+  normalize_post_filenames
 
   if [[ -n "$(git status --porcelain)" ]]; then
     git add -A
