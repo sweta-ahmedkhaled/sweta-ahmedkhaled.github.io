@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% if page.title %}{{ page.title }} &middot; {% endif %}{{ site.title }}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&family=Space+Grotesk:wght@500;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+
+{% include nav.html %}
+{% include social.html %}
+
+<main>
+{{ content }}
+</main>
+
+{% include footer.html %}
+
+<script>
+  var avatarEl = document.getElementById('avatar-photo');
+  if (avatarEl && avatarEl.dataset.photos) {
+    var photos = avatarEl.dataset.photos.split(',');
+    var idx = 0;
+    avatarEl.addEventListener('click', function () {
+      idx = (idx + 1) % photos.length;
+      avatarEl.src = photos[idx];
+    });
+  }
+</script>
+
+</body>
+</html>

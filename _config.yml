@@ -1,0 +1,19 @@
+title: Ahmed Khaled
+description: "Teaching computers, and humans, how to learn"
+author: Ahmed Khaled
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+permalink: /blog/:year/:month/:day/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

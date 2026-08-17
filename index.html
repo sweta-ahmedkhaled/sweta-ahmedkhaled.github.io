@@ -1,0 +1,66 @@
+---
+layout: default
+---
+<section id="top" class="hero">
+  <div class="hero-inner">
+    <h1 class="hero-headline">Teaching <span class="underline">computers</span>, and <span class="underline">humans</span>, how to learn</h1>
+    <div class="hero-bio">
+      <img class="avatar" id="avatar-photo" src="{{ '/assets/images/avatar.jpg' | relative_url }}" data-photos="{{ '/assets/images/avatar.jpg' | relative_url }},{{ '/assets/images/avatar2-nobg.png' | relative_url }}" alt="Ahmed Khaled">
+      <p class="hero-text">I'm a Researcher/Master Student on AI, and Educator <span class="arabic-text" lang="ar" dir="rtl">محب للعلم وأهله وللتعليم</span></p>
+    </div>
+  </div>
+</section>
+
+<section id="timeline" class="section">
+  <div class="section-inner">
+    <h2>Timeline</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-meta">
+          <span class="timeline-year">Feb 2024 &ndash; Now</span>
+          <img class="timeline-logo" src="{{ '/assets/images/logo-nile-nobg.png' | relative_url }}" alt="Nile University">
+        </div>
+        <p class="timeline-text">I'm a Teaching Assistant in Computer Science and a Master's student in Informatics at Nile University. I've finished my pre-master coursework and am now preparing to defend my thesis, working on computer vision in the medical domain under the supervision of Dr. Essam Rashed and Dr. Ghada Khoriba.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-meta">
+          <span class="timeline-year">2018 &ndash; 2023</span>
+          <img class="timeline-logo" src="{{ '/assets/images/logo-ainshams-nobg.png' | relative_url }}" alt="Ain Shams University">
+        </div>
+        <p class="timeline-text">BSc at Ain Shams University, where I ranked first in my class. I'd always wanted to become a teaching assistant &mdash; it felt prestigious &mdash; and found myself naturally leading study groups before exams. That dream came true, just at a different university, one more focused on research.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="research" class="section">
+  <div class="section-inner">
+    <h2>Research</h2>
+    <p class="placeholder">More coming soon.</p>
+  </div>
+</section>
+
+<section id="teaching" class="section">
+  <div class="section-inner">
+    <h2>Teaching</h2>
+    <p class="placeholder">More coming soon.</p>
+  </div>
+</section>
+
+<section id="blog" class="section">
+  <div class="section-inner">
+    <h2>Blog</h2>
+    {% if site.posts.size > 0 %}
+    <div class="blog-list">
+      {% for post in site.posts %}
+      <a class="blog-item" href="{{ post.url | relative_url }}">
+        <span class="blog-date">{{ post.date | date: "%B %-d, %Y" }}</span>
+        <span class="blog-title">{{ post.title }}</span>
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="placeholder">More coming soon.</p>
+    {% endif %}
+  </div>
+</section>
