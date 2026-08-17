@@ -7,6 +7,7 @@ kramdown:
   input: GFM
 
 permalink: /blog/:year/:month/:day/:title/
+timezone: Africa/Cairo
 
 plugins:
   - jekyll-feed
