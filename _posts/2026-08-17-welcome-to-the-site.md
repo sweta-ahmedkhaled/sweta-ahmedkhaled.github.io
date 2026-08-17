@@ -1,11 +1,19 @@
 ---
 layout: post
-title: "Welcome to the site"
+title: "Welcome to the site أحمد خالد يُرحِّب بالزائرين"
 date: 2026-08-17
 ---
 
-This is your first post, and it's written entirely in markdown.
+أهلًا وسهلًا ومرحبًا - دا احنا زارنا النبي - اتفضل!
 
-Every file in the `_posts` folder becomes a page automatically, and shows up in the Blog section on the homepage — newest first, no extra step. The filename controls the date and URL (`YYYY-MM-DD-title.md`), and the three lines at the top between `---` (the *front matter*) set the title and date shown on the page.
+هذه محاولة مني لتوثيق ما مضى من العُمر وتخطيط لما بقى له
+إذ رُمت بهذا التنظيم اليقظة في بناء نفسي باعتباري باحث علمي و مُعلِّم أكاديمي ومهندس في مجالات الذكاء الاصطناعي 
+ورُمت أيًا فَهم نفسي وترتيب أفكاري
+ثم جعلتها عامة للكِرام إذ أرادوا أن يعرفوا عن الفقير شيئِا من تكوينه العلمي وأحلامه 
 
-Delete this file, or edit it, to get started. Everything below the front matter is regular markdown: **bold**, *italics*, [links](https://example.com), and so on all work exactly as they do in Obsidian.
+فأنا إن شرعت في شرح مادة علميَّة وضعتها هنا
+وإن ساهمت مسامهمة بحثية في العلم سُقتها هنا
+وإن كتبت خاطرة فكرية في الحياة بعد تجربة شاركتها هنا
+
+اتمنى لك أن تسعد هنا إن عبرت يومًا
+
