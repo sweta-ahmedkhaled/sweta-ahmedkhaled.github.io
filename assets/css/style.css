@@ -303,6 +303,12 @@ a.social-handle:hover {
   object-fit: contain;
 }
 
+.timeline-logos {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
 .timeline-text {
   font-family: var(--serif);
   font-size: 17px;
