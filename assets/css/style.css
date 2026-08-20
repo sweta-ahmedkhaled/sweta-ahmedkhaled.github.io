@@ -317,6 +317,10 @@ a.social-handle:hover {
   margin: 0;
 }
 
+.timeline-text a {
+  color: var(--ink);
+}
+
 /* ---------- Blog ---------- */
 
 .blog-list {
