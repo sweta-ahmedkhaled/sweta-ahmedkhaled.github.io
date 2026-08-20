@@ -1,6 +1,6 @@
 ---
-title: "Soccer Video Summarization"
+title: Soccer Video Summarization
 year: "2023"
-order: 5
-tagline: "Graduation project. Turning a full match into the few minutes that matter."
+order: 1
+tagline: Graduation project. Turning a Full Match into The Few Minutes most Exciting.
 ---
