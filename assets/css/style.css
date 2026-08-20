@@ -3,8 +3,8 @@
   --ink: #191817;
   --ink-soft: #4a4744;
   --border: #dcd9cf;
-  --sans: "Space Grotesk", -apple-system, "Segoe UI", sans-serif;
-  --serif: "Source Serif 4", Georgia, serif;
+  --sans: "Space Grotesk", "Amiri", -apple-system, "Segoe UI", sans-serif;
+  --serif: "Source Serif 4", "Amiri", Georgia, serif;
 }
 
 * {

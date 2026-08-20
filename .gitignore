@@ -8,3 +8,4 @@ Gemfile.lock
 .auto-publish.log
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
+_to_delete/
