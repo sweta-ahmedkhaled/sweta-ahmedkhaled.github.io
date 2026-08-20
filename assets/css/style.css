@@ -351,6 +351,64 @@ a.social-handle:hover {
   text-decoration: underline;
 }
 
+/* ---------- Research ---------- */
+
+.research-list {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.research-item {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 28px;
+  align-items: baseline;
+  padding: 22px 0;
+  border-top: 1px solid var(--border);
+}
+
+.research-item:first-child {
+  border-top: none;
+}
+
+.research-year {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--ink-soft);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.research-title {
+  font-family: var(--serif);
+  font-size: 19px;
+  line-height: 1.4;
+  color: var(--ink);
+  text-decoration: none;
+  display: block;
+}
+
+a.research-title:hover {
+  text-decoration: underline;
+}
+
+.research-tagline {
+  font-family: var(--serif);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin: 6px 0 0;
+}
+
+.research-links a {
+  color: var(--ink-soft);
+}
+
+.research-links a:hover {
+  color: var(--ink);
+}
+
 /* ---------- Post page ---------- */
 
 .back-link {
@@ -452,6 +510,11 @@ a.social-handle:hover {
   .timeline-meta {
     flex-direction: row;
     align-items: center;
+  }
+
+  .research-item {
+    grid-template-columns: 1fr;
+    gap: 6px;
   }
 
   .blog-item {

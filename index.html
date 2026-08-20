@@ -36,7 +36,27 @@ layout: default
 <section id="research" class="section">
   <div class="section-inner">
     <h2>Research</h2>
+    {% assign research_items = site.research | sort: "order" %}
+    {% if research_items.size > 0 %}
+    <div class="research-list">
+      {% for item in research_items %}
+      {% assign body = item.content | strip_html | strip %}
+      <div class="research-item">
+        <span class="research-year">{{ item.year }}</span>
+        <div class="research-body">
+          {% if body != "" %}
+          <a class="research-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+          {% else %}
+          <span class="research-title">{{ item.title }}</span>
+          {% endif %}
+          {% if item.tagline %}<p class="research-tagline">{{ item.tagline }}</p>{% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
     <p class="placeholder">More coming soon.</p>
+    {% endif %}
   </div>
 </section>
 
