@@ -4,79 +4,72 @@ year: "2027"
 order: 1
 tagline: Brain Tumor Prognosis
 ---
-I have joined **Rashed Lab**, under the supervision of **Dr. Essam Rashed** and **Dr. Ghada Khoriba**.
+I have joined **Rashed Lab**, under the supervision of **[Dr. Essam Rashed](https://scholar.google.com/citations?hl=en&user=ihTTcfkAAAAJ)** and **[Dr. Ghada Khoriba](https://scholar.google.com/citations?user=jwTBsIIAAAAJ&hl=en)**.
 
-## 1. The Broader Research Challenge
+Dr. Essam has a challenging research project:
 
-Dr. Essam's research focuses on:
+**Efficient and Private Large Multi-Modal Model Training and Inference over Heterogeneous Edge-Cloud Networks**
 
-> **Efficient and Private Large Multi-Modal Model Training and Inference over Heterogeneous Edge-Cloud Networks**
+Two hard constraints make this nontrivial:
 
-The challenge is driven by two fundamental constraints:
-
-- **Statistical heterogeneity:** data across edge clients—e.g., hospitals, sensors, or users—is **non-IID**, with different distributions, scanners, protocols, and populations.
+1. **Statistical heterogeneity** — data across different edge clients is not **identically distributed**: different hospitals, scanners, users, and domains. This breaks the standard federated-learning assumption of homogeneous clients.
     
-- **Privacy:** sensitive data cannot leave its institution/device in raw form, while even gradients or model updates may leak information through attacks such as gradient inversion.
+2. **Privacy** — sensitive data such as **patient records and personal images** cannot leave the device or institution in raw form. Even gradients or model updates can potentially leak private information through attacks such as gradient inversion.
     
 
-The JST project divides the research direction into two complementary components:
+The [project summary](https://projectdb.jst.go.jp/grant/JST-PROJECT-25126435/) divides the work into two main sides:
 
-- **Japan — Privacy-preserving training:** Federated Learning, Metric Differential Privacy, and Trusted Execution Environments (TEE).
+- **Japan side (Cao / Su / Rashed):** privacy-preserving techniques through **Federated Learning**, particularly **Metric Differential Privacy** and **Trusted Execution Environments (TEE)**.
     
-- **Singapore — Efficient inference:** Mixture-of-Experts (MoE) and Retrieval-Augmented Generation (RAG) for dynamically distributing computation between edge and cloud.
-    
-
-The ultimate goal is a **high-performance, low-latency, privacy-preserving multimodal AI system**.
-
-## 2. My Initial Research Direction
-
-When I first met Dr. Essam, he gave me three papers that implicitly defined a research path:
-
-| Role           | Work                                                                        | Purpose                                                                                                      |
-| -------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| **Method**     | **FedStack**                                                                | Handling heterogeneous federated clients rather than forcing a single shared model                           |
-| **Literature** | **Thrasher et al.** — Multimodal Federated Learning in Healthcare: A Review | Understanding what healthcare MFL has solved and where gaps remain                                           |
-| **Dataset**    | **Flouri et al. — PROTEAS**                                                 | A real-world, multi-institutional MRI + clinical + radiomics dataset with natural cross-center heterogeneity |
-
-The connection is therefore:
-
-**Federated Heterogeneity → Multimodal Healthcare → Real Clinical Dataset**
-
-## 3. The PROTEAS Dataset as a Research Testbed
-
-The PROTEAS dataset is particularly interesting because it provides rich longitudinal information across multiple institutions and modalities.
-
-Its natural variation across centers—different **scanners, acquisition protocols, and patient populations**—makes it a realistic environment for studying the type of heterogeneity targeted by the broader research project.
-
-More importantly, the dataset enables several clinically meaningful downstream tasks.
-
-One particularly exciting question is:
-
-> **Given a patient's past MRI trajectory and treatment history, can we predict what the patient's next scan will look like?**
-
-This moves the problem from static prediction toward **longitudinal prognosis / trajectory prediction**.
-
-## 4. Current Phase
-
-At this stage, we are **not yet focusing on the heterogeneous-client/federated setting**.
-
-Instead, we are investigating whether the dataset itself contains enough information to support the desired downstream prediction task.
-
-Our current questions are therefore:
-
-1. **What can actually be predicted from the longitudinal MRI data?**
-    
-2. **How much predictive information comes from the imaging trajectory itself?**
-    
-3. **How much additional information is provided by treatment and clinical variables?**
-    
-4. **Are there additional predictive features that can be extracted from the raw imaging/DICOM data?**
-    
-5. **Does the dataset contain sufficient longitudinal coverage, sample size, and temporal consistency to support a reliable prognosis task?**
+- **Singapore side (Lim et al.):** efficient inference using **Mixture of Experts (MoE)** and **Retrieval-Augmented Generation (RAG)** to dynamically allocate computation between edge and cloud.
     
 
-Only after establishing that the **prediction problem is feasible and scientifically meaningful** does it make sense to introduce the next layer:
+The end goal is a jointly developed **high-performance, low-latency, privacy-preserving AI system**.
 
-> **How can this prediction be performed efficiently and privately across heterogeneous institutions?**
+---
 
-That provides a natural progression from the **dataset investigation**, to the **clinical prediction problem**, and eventually to the broader **heterogeneous federated multimodal learning** research direction.
+## How I was introduced to the problem
+
+When I first met Dr. Essam, he gave me three papers and oriented me toward an interdisciplinary research area:
+
+**Method → Literature Review → Dataset**
+
+1. **Method — FedStack**  
+    How can we handle federated clients that are architecturally/statistically heterogeneous instead of forcing everyone into one shared model?
+    
+2. **Literature — Thrasher Review**  
+    What has **Multimodal Federated Learning in Healthcare** already solved, and more importantly, **what is still missing?**
+    
+3. **Dataset — Flouri / PROTEAS**  
+    A real, recently published, multi-institutional dataset containing **MRI, clinical, and radiomic data**. Its six source centers naturally introduce heterogeneity through different scanners, protocols, and patient populations.
+    
+
+So there is an interesting connection:
+
+**FedStack → Multimodal Federated Learning → PROTEAS**
+
+The method gives us a way to think about heterogeneity, the literature tells us where the research gap may be, and the dataset gives us a concrete clinical testbed.
+
+---
+
+## The Dataset and the Bigger Question
+
+The dataset is rich and enables many interesting downstream capabilities.
+
+One of the most exciting questions is:
+
+> **Given a patient's past trajectory and treatment, can we predict the next MRI scan?**
+
+This shifts the problem from simply analyzing a single MRI to understanding **how the disease evolves over time** and whether that evolution can be predicted from the information we already have.
+
+And now, we are in the phase where we are **investigating and assessing whether this dataset can actually support such a task**.
+
+For now, we have left the **heterogeneous-client / federated setting** for a later stage.
+
+The immediate question is simpler:
+
+> **Does the dataset contain enough information to make this prediction problem feasible and scientifically meaningful?**
+
+If the answer is yes, then we can later bring back the harder question:
+
+> **Can we solve this problem across heterogeneous institutions while preserving privacy and remaining computationally efficient?**
