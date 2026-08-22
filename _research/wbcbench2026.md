@@ -10,3 +10,10 @@ The Competition [Website](https://xudong-ma.github.io/WBCBench2026-Robust-White-
 
 It was a wonderful Experience as My Team Ranked First on the Leaderboard based on Macro-F1 Primary Metric
 
+And we were an Amazing Team (**GODA**) who did a lot of collaborated and individual Experiments like a (plenty of arcs) in a War try to hit the Target. and we did! Alhamdullilah 
+
+![[Yellow Black Bold Minimalist Crime Movie Poster.png|186]]
+GODA TEAM, Omar Shoaib, Gannat, Donia.
+
+The winning Pipeline:
+
