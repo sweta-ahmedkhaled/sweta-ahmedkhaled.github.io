@@ -482,7 +482,7 @@ a.research-title:hover {
   margin: 16px 0;
 }
 
-.architect-drawing {
+.post-body img.architect-drawing {
   display: block;
   max-width: 360px;
   margin: 16px auto;
