@@ -469,6 +469,12 @@ a.research-title:hover {
   color: var(--ink);
 }
 
+.post-body img {
+  max-width: 100%;
+  height: auto;
+  margin: 4px 8px 4px 0;
+}
+
 /* ---------- Footer ---------- */
 
 .footer {
