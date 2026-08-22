@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "preview-static",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4500", "--directory", "/private/tmp/claude-501/-Users-ahmedkhaled-website/e8bd7ab0-334c-4b8f-bf73-472cbde77b69/scratchpad/preview"],
+      "port": 4500
+    }
+  ]
+}

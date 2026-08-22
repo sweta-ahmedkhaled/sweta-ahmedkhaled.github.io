@@ -472,7 +472,20 @@ a.research-title:hover {
 .post-body img {
   max-width: 100%;
   height: auto;
-  margin: 4px 8px 4px 0;
+}
+
+.post-images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.architect-drawing {
+  display: block;
+  max-width: 360px;
+  margin: 16px auto;
 }
 
 /* ---------- Footer ---------- */
