@@ -12,9 +12,12 @@ The Challenge [Paper](https://www.semanticscholar.org/reader/8050b0539809b1e4e54
 
 It was a wonderful Experience as My Team Ranked First on the Leaderboard based on Macro-F1 Primary Metric
 
-Our Proposed Methodology(ies)
-https://canva.link/xao9mo9kiqwa44v
-Our Best Trials handles Imbalance by a – Sampler (Controlled Exposure)
+Our Proposed [Methodology](https://canva.link/xao9mo9kiqwa44v)(ies)
+
+Our Best Trials handles the Challenge and hits a good results because of:
+- Imbalance Handling – Sampler (Controlled Exposure), We control what the model sees per batch to learn morphology, not frequency.
+- Applied label smoothing to Cross Entropy during training, which replaces hard one-hot targets with softened targets to reduce overconfidence and improve generalization across visually similar white blood cell classes.
+
 
 And we were an Amazing Team (**GODA**) who did a lot of collaborated and individual Experiments like a (plenty of arcs) in a War try to hit the Target. and we did! Alhamdullilah 
 
