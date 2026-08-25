@@ -21,7 +21,7 @@ Our Best Trials handles the Challenge and hits a good results because of:
 
 And we were an Amazing Team (**GODA**) who did a lot of collaborated and individual Experiments like a (plenty of arcs) in a War try to hit the Target. and we did! Alhamdullilah 
 
-![[Yellow Black Bold Minimalist Crime Movie Poster.png|186]]
+<img src="{{ '/assets/Yellow Black Bold Minimalist Crime Movie Poster.png' | relative_url }}" alt="WBCBench 2026 poster" width="186">
 **GODA TEAM, Omar Shoaib, Gannat, Donia.**
 
 
@@ -29,20 +29,20 @@ And we were an Amazing Team (**GODA**) who did a lot of collaborated and individ
 1. **Domain SHift**
 2. **Class Imbalance**
 
-![[Pasted image 20260823115020.png|448]]
+<img src="{{ '/assets/Pasted image 20260823115020.png' | relative_url }}" alt="WBCBench 2026 challenge" width="448">
 
 **The winning Pipeline (belongs NOT to ours):**
 
 
-![[Pasted image 20260823114921.png|483]]
+<img src="{{ '/assets/Pasted image 20260823114921.png' | relative_url }}" alt="Winning pipeline" width="483">
 
 **Backbones Effects on Results:**
 
-![[Pasted image 20260823115122.png|350]]
+<img src="{{ '/assets/Pasted image 20260823115122.png' | relative_url }}" alt="Backbone effects on results" width="350">
 
 **Ablation Study:**
 
-![[Pasted image 20260823115207.png|363]]
+<img src="{{ '/assets/Pasted image 20260823115207.png' | relative_url }}" alt="Ablation study" width="363">
 
 
 References:
