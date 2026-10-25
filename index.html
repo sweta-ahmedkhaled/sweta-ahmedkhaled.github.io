@@ -84,7 +84,7 @@ layout: default
   <div class="section-inner">
     <h2>Blog</h2>
     {% if site.posts.size > 0 %}
-    <div class="blog-grid">
+    <div class="blog-grid" dir="rtl">
       {% for post in site.posts %}
       {% assign mod = forloop.index | modulo: 5 %}
       {% if forloop.first %}
@@ -98,14 +98,12 @@ layout: default
       {% else %}
         {% assign card_class = "c-warm" %}
       {% endif %}
-      <article class="blog-card {{ card_class }}">
+      <article class="blog-card {{ card_class }} {% if post.image %}has-image{% else %}no-image{% endif %}" dir="rtl">
+        {% if post.image %}
         <div class="blog-card-art">
-          <div class="blog-card-art-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-            </svg>
-          </div>
+          <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="blog-card-img" loading="lazy">
         </div>
+        {% endif %}
         <div class="blog-card-body">
           <div class="blog-card-meta">
             {% include date.html date=post.date %}
@@ -126,9 +124,9 @@ layout: default
   </div>
 </section>
 
-<section id="contact" class="section contact-section">
+<section id="contact" class="section contact-section" dir="rtl">
   <div class="section-inner">
-    <div class="contact-card">
+    <div class="contact-card" dir="rtl">
       <div class="contact-header">
         <span class="contact-badge">تواصل</span>
         <h2 class="contact-title">تواصل مع أحمد</h2>
