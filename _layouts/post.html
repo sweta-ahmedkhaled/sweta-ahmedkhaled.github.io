@@ -3,9 +3,19 @@ layout: default
 ---
 <article class="section">
   <div class="section-inner post">
-    <a class="back-link" href="{{ '/' | relative_url }}#blog">&larr; Back to Blog</a>
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-date">{{ page.date | date: "%B %-d, %Y" }}</p>
+    <a class="back-link" href="{{ '/' | relative_url }}#blog">
+      <span class="back-arrow">&larr;</span> العودة للمدونة
+    </a>
+    <header class="post-header">
+      <div class="post-meta">
+        {% include date.html date=page.date %}
+        {% if page.categories.size > 0 %}
+          <span class="meta-sep">&bull;</span>
+          <span class="post-category">{{ page.categories | first }}</span>
+        {% endif %}
+      </div>
+      <h1 class="post-title">{{ page.title }}</h1>
+    </header>
     <div class="post-body">
       {{ content }}
     </div>
