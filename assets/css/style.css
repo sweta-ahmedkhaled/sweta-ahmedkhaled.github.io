@@ -1,10 +1,18 @@
 :root {
-  --bg: #f0eee6;
-  --ink: #191817;
-  --ink-soft: #4a4744;
-  --border: #dcd9cf;
-  --sans: "Space Grotesk", "Amiri", -apple-system, "Segoe UI", sans-serif;
-  --serif: "Source Serif 4", "Amiri", Georgia, serif;
+  /* Warm parchment palette — inspired by yahya-ahmed.com */
+  --bg:       #f5efe4;   /* warm parchment page background */
+  --bg2:      #ece4d4;   /* card / panel background */
+  --bg3:      #fffaf2;   /* input / search backgrounds */
+  --ink:      #1d1c19;   /* primary text — deep warm black */
+  --ink2:     #4a463e;   /* secondary text */
+  --mute:     #6f685b;   /* muted labels, dates, metadata */
+  --accent:   #b9472a;   /* terracotta/rust red accent */
+  --border:   rgba(29,28,25,.14);   /* subtle warm divider */
+  --border2:  rgba(29,28,25,.30);   /* slightly visible border */
+  --sans:    "Space Grotesk", "Segoe UI", Tahoma, sans-serif;
+  --serif:   "Source Serif 4", "Amiri", Georgia, serif;
+  --ui:      "Space Grotesk", "Segoe UI", Tahoma, sans-serif;
+  --read:    "Source Serif 4", "Amiri", Georgia, serif;
 }
 
 * {
@@ -154,7 +162,7 @@ body {
 
 .arabic-text {
   font-family: "Amiri", serif;
-  color: var(--ink-soft);
+  color: var(--mute);
 }
 
 /* ---------- Sections ---------- */
@@ -239,7 +247,7 @@ body {
   margin: 8px 0 0 30px;
   font-family: var(--serif);
   font-size: 14px;
-  color: var(--ink-soft);
+  color: var(--mute);
   text-decoration: none;
   word-break: break-word;
 }
@@ -256,7 +264,7 @@ a.social-handle:hover {
 .placeholder {
   font-family: var(--serif);
   font-size: 18px;
-  color: var(--ink-soft);
+  color: var(--mute);
   margin: 0;
 }
 
@@ -293,7 +301,7 @@ a.social-handle:hover {
 .timeline-year {
   font-family: var(--sans);
   font-size: 13px;
-  color: var(--ink-soft);
+  color: var(--mute);
   letter-spacing: 0.02em;
 }
 
@@ -318,7 +326,7 @@ a.social-handle:hover {
 }
 
 .timeline-text a {
-  color: var(--ink-soft);
+  color: var(--mute);
   text-decoration-color: var(--border);
   text-underline-offset: 2px;
   transition: color 0.15s ease, text-decoration-color 0.15s ease;
@@ -355,7 +363,7 @@ a.social-handle:hover {
 .blog-date {
   font-family: var(--sans);
   font-size: 13px;
-  color: var(--ink-soft);
+  color: var(--mute);
   white-space: nowrap;
 }
 
@@ -393,7 +401,7 @@ a.social-handle:hover {
 .research-year {
   font-family: var(--sans);
   font-size: 13px;
-  color: var(--ink-soft);
+  color: var(--mute);
   letter-spacing: 0.02em;
   white-space: nowrap;
 }
@@ -415,12 +423,12 @@ a.research-title:hover {
   font-family: var(--serif);
   font-size: 16px;
   line-height: 1.6;
-  color: var(--ink-soft);
+  color: var(--mute);
   margin: 6px 0 0;
 }
 
 .research-links a {
-  color: var(--ink-soft);
+  color: var(--mute);
 }
 
 .research-links a:hover {
@@ -432,7 +440,7 @@ a.research-title:hover {
 .back-link {
   font-family: var(--sans);
   font-size: 14px;
-  color: var(--ink-soft);
+  color: var(--mute);
   text-decoration: none;
 }
 
@@ -450,7 +458,7 @@ a.research-title:hover {
 .post-date {
   font-family: var(--sans);
   font-size: 14px;
-  color: var(--ink-soft);
+  color: var(--mute);
   margin: 0 0 32px;
 }
 
@@ -499,7 +507,7 @@ a.research-title:hover {
 .footer p {
   font-family: var(--sans);
   font-size: 13px;
-  color: var(--ink-soft);
+  color: var(--mute);
   margin: 0;
 }
 
