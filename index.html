@@ -86,34 +86,18 @@ layout: default
     {% if site.posts.size > 0 %}
     <div class="blog-grid" dir="rtl">
       {% for post in site.posts %}
-      {% assign mod = forloop.index | modulo: 5 %}
-      {% if forloop.first %}
-        {% assign card_class = "k-lg c-dark" %}
-      {% elsif mod == 2 %}
-        {% assign card_class = "k-wide c-rust" %}
-      {% elsif mod == 3 %}
-        {% assign card_class = "c-sand" %}
-      {% elsif mod == 4 %}
-        {% assign card_class = "c-cream" %}
-      {% else %}
-        {% assign card_class = "c-warm" %}
-      {% endif %}
-      <article class="blog-card {{ card_class }} {% if post.image %}has-image{% else %}no-image{% endif %}" dir="rtl">
-        {% if post.image %}
-        <div class="blog-card-art">
-          <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="blog-card-img" loading="lazy">
+      <article class="blog-card {% if forloop.first %}card-featured{% endif %}" dir="rtl">
+        <div class="blog-card-meta">
+          {% include date.html date=post.date %}
         </div>
+        <h3 class="blog-card-title">
+          <a class="blog-card-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h3>
+        {% if post.excerpt %}
+        <p class="blog-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 24 }}</p>
         {% endif %}
-        <div class="blog-card-body">
-          <div class="blog-card-meta">
-            {% include date.html date=post.date %}
-          </div>
-          <h3 class="blog-card-title">
-            <a class="blog-card-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          </h3>
-          {% if post.excerpt %}
-          <p class="blog-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 22 }}</p>
-          {% endif %}
+        <div class="blog-card-footer">
+          <span class="blog-card-read">اقرأ المقال &larr;</span>
         </div>
       </article>
       {% endfor %}
