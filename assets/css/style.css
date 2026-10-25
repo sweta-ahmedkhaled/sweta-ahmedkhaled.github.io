@@ -27,7 +27,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: var(--serif);
+  font-family: var(--ui);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -162,7 +162,9 @@ body {
 
 .arabic-text {
   font-family: "Amiri", serif;
-  color: var(--mute);
+  color: var(--ink2);
+  font-size: 1.05em;
+  line-height: 1.8;
 }
 
 /* ---------- Sections ---------- */
@@ -463,18 +465,42 @@ a.research-title:hover {
 }
 
 .post-body {
-  font-family: var(--serif);
-  font-size: 19px;
-  line-height: 1.7;
+  font-family: "Amiri", "Traditional Arabic", Georgia, serif;
+  font-size: clamp(19px, 1.35vw, 21.5px);
+  line-height: 2.05;
   color: var(--ink);
+  max-width: 700px;
+  overflow-wrap: break-word;
 }
 
 .post-body p {
-  margin: 0 0 20px;
+  margin: 0 0 1.3em;
 }
 
 .post-body a {
-  color: var(--ink);
+  color: var(--accent);
+  text-underline-offset: 6px;
+}
+
+.post-body h2,
+.post-body h3,
+.post-body h4 {
+  font-family: "Amiri", serif;
+  font-weight: 700;
+  line-height: 1.6;
+  margin: 2em 0 .6em;
+}
+
+.post-body blockquote {
+  margin: 2em 0;
+  padding-inline: 1.3em 0;
+  border-inline-start: 2px solid var(--accent);
+  color: var(--ink2);
+  font-style: italic;
+}
+
+.post-body img {
+  border-radius: 12px;
 }
 
 .post-body img {
